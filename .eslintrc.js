@@ -17,7 +17,7 @@ module.exports = {
     plugins: ["prettier"],
     // add your custom rules here
     rules: {
-        "nuxt/no-cjs-in-config": "off",
-        indent: ["error", 4] // 四个空格缩进
+        "nuxt/no-cjs-in-config": 0,
+        indent: [2, 4] // 四个空格缩进
     }
 };

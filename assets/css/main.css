@@ -1,0 +1,71 @@
+html,
+body {
+    background-color: rgb(246, 246, 246);
+    color: #333;
+    letter-spacing: 0.5px;
+    /* height: 100vh; */
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: #fe8c00;
+}
+
+.logo {
+    width: 243px;
+    height: 218px;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+}
+
+/* 设置一些公共类 */
+/* 版心 */
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 朝右的箭头 */
+.rightArrow {
+    width: 6px;
+    height: 6px;
+    color: #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    transform: rotate(-45deg);
+    display: block;
+}

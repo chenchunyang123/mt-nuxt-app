@@ -20,7 +20,8 @@
         "koa": "^2.6.2",
         "less": "^3.10.3",
         "less-loader": "^5.0.0",
-        "nuxt": "^2.0.0"
+        "nuxt": "^2.0.0",
+        "source-map": "^0.7.3"
     },
     "devDependencies": {
         "@nuxtjs/eslint-config": "^1.0.1",

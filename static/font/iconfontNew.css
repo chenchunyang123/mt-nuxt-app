@@ -1,0 +1,143 @@
+/* 主页全部分类左侧的图标字体（从美团复制过来） */
+@font-face {
+    font-family: "iconfontNew";
+    src: url("./iconfontNew.eot");
+    src: url("./iconfontNew.eot?#iefix") format("embedded-opentype"),
+        url("./iconfontNew.woff") format("woff"),
+        url("./iconfontNew.ttf") format("truetype"),
+        url("./iconfontNew.svg#iconfont") format("svg");
+}
+
+.iconfontNew {
+    font-family: "iconfontNew" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfontNew:before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+.hc-icon-foodNew:before {
+    content: "\e60e";
+    color: #ff8200;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-hotelNew:before {
+    content: "\e616";
+    color: #9b5e3e;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-maoyanNew:before {
+    content: "\e612";
+    color: #ff3d00;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-ktvNew:before {
+    content: "\e607";
+    color: #00bf96;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-zhenguoNew:before {
+    content: "\e60c";
+    color: #ffb500;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-beautyNew:before {
+    content: "\e60f";
+    color: #ff4081;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-marriedNew:before {
+    content: "\e609";
+    color: #ff4081;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-childNew:before {
+    content: "\e608";
+    color: #ff4081;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-sportNew:before {
+    content: "\e611";
+    color: #03a9f4;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-decorateNew:before {
+    content: "\e60b";
+    color: #00bf96;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-educationNew:before {
+    content: "\e610";
+    color: #00bf96;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-medicalNew:before {
+    content: "\e60d";
+    color: #03a9f4;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-barNew:before {
+    content: "\e606";
+    color: #00bf96;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-waimaiNew:before {
+    content: "\e60a";
+    color: #ffb500;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-planeNew:before {
+    content: "\e615";
+    color: #03a9f4;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-lifeNew:before {
+    content: "\e614";
+    color: #00bf96;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.hc-icon-travelNew:before {
+    content: "\e613";
+    color: #03a9f4;
+    vertical-align: middle;
+    line-height: 18px;
+}
