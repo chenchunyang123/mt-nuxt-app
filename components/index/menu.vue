@@ -440,7 +440,8 @@ export default {
         background-color: #fff;
         position: absolute;
         left: 230px;
-        top: 68px;
+        top: 70px;
+        z-index: 999;
         dl {
             width: 340px;
             margin: 0 auto;

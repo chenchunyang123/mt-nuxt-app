@@ -69,3 +69,8 @@ a:visited {
     transform: rotate(-45deg);
     display: block;
 }
+
+/* main中的元素超出自身位置不被隐藏 */
+.el-main {
+    overflow: visible;
+}

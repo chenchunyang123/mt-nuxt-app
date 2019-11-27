@@ -1,23 +1,31 @@
 <template>
     <div class="p-index inner">
-        <el-row>
-            <el-col :span="6">
-                <Menu />
-            </el-col>
-            <el-col :span="18">2</el-col>
-        </el-row>
-        <el-row :span="24">3</el-row>
+        <div class="p-banner">
+            <Menu />
+            <Banner />
+        </div>
+        <div>3</div>
     </div>
 </template>
 
 <script>
-import Menu from "~/components/index/menu.vue";
+import Menu from "~/components/index/menu";
+import Banner from "~/components/index/banner";
 export default {
     components: {
-        Menu
+        Menu,
+        Banner
     }
 };
 </script>
 
 <style lang="less">
+.p-index {
+    .p-banner {
+        display: flex;
+        position: relative;
+        top: -72px;
+        z-index: 999;
+    }
+}
 </style>
