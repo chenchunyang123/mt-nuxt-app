@@ -10,13 +10,7 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            carouselBg: []
-        };
-    }
-};
+export default {};
 </script>
 
 <style lang="less" scoped>

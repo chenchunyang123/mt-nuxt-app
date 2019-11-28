@@ -117,7 +117,6 @@ export default {
             justify-content: space-between;
             > div:nth-child(1) {
                 width: 550px;
-                background-color: orange;
             }
             > div:nth-child(2) {
                 width: 150px;

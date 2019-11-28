@@ -1,5 +1,5 @@
 <template>
-    <el-container>
+    <el-container class="d-wrap">
         <el-header height="200px">
             <my-header />
         </el-header>
@@ -20,7 +20,15 @@ export default {
 </script>
 
 <style lang="less" scope>
-.el-header {
-    padding: 0;
+.d-wrap {
+    background-color: rgb(246, 246, 246);
+    .el-footer {
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
+    .el-header {
+        padding: 0;
+    }
 }
 </style>>
