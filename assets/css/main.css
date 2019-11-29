@@ -4,8 +4,7 @@ body {
     letter-spacing: 0.5px;
     /* height: 100vh; */
     margin: 0;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
-        "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-size: 12px;
     box-sizing: border-box;
 }
@@ -71,4 +70,9 @@ a:visited {
 /* 轮播按钮背景颜色 */
 .el-carousel__arrow {
     background-color: rgba(31, 45, 61, 0.3);
+}
+
+/* 输入框input的prefix位置 */
+.el-input__prefix {
+    left: 10px;
 }

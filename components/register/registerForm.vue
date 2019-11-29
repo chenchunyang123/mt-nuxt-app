@@ -34,7 +34,7 @@
             >
                 <el-input
                     v-model="formLabel.pwd"
-                    type="password"
+                    show-password
                 ></el-input>
             </el-form-item>
             <el-form-item
@@ -43,8 +43,9 @@
             >
                 <el-input
                     v-model="formLabel.rpwd"
-                    type="password"
+                    show-password
                 ></el-input>
+                <div>{{error}}</div>
             </el-form-item>
             <el-form-item size="large">
                 <el-button @click="register">同意以下协议并注册</el-button>
@@ -58,6 +59,7 @@
 </template>
 
 <script>
+import md5 from "md5";
 export default {
     data() {
         return {
@@ -120,7 +122,8 @@ export default {
                     }
                 ]
             },
-            statusMsg: ""
+            statusMsg: "",
+            error: ""
         };
     },
     methods: {
@@ -130,16 +133,16 @@ export default {
             if (this.timerid) {
                 return false;
             }
-            // vaild是错误信息, 正确的话就为空字符串
-            this.$refs["myForm"].validateField("name", vaild => {
-                namePass = vaild;
+            // err是错误信息, 正确的话就为空字符串
+            this.$refs["myForm"].validateField("name", err => {
+                namePass = err;
             });
             this.statusMsg = "";
             if (namePass) {
                 return false;
             }
-            this.$refs["myForm"].validateField("email", vaild => {
-                emailPass = vaild;
+            this.$refs["myForm"].validateField("email", err => {
+                emailPass = err;
             });
             if (!namePass && !emailPass) {
                 this.$axios
@@ -150,9 +153,9 @@ export default {
                     .then(({ status, data }) => {
                         if (status === 200 && data && data.code === 0) {
                             let count = 60;
-                            this.statusMsg = `验证码已发送，剩余${count--}秒`;
+                            this.statusMsg = `验证码已发送，剩余${--count}秒`;
                             this.timerid = setInterval(() => {
-                                this.statusMsg = `验证码已发送，剩余${count--}秒`;
+                                this.statusMsg = `验证码已发送，剩余${--count}秒`;
                                 if (count === 0) {
                                     clearInterval(this.timerid);
                                     this.statusMsg = "";
@@ -165,7 +168,31 @@ export default {
             }
         },
         register() {
-            alert(1);
+            this.$refs["myForm"].validate(isPass => {
+                if (isPass) {
+                    this.$axios
+                        .post("/users/signup", {
+                            username: window.encodeURIComponent(this.formLabel.name),
+                            password: md5(this.formLabel.pwd),
+                            email: this.formLabel.email,
+                            code: this.formLabel.code
+                        })
+                        .then(({ status, data }) => {
+                            if (status === 200) {
+                                if (data && data.code === 0) {
+                                    location.href = "/login";
+                                } else {
+                                    this.error = data.msg;
+                                }
+                            } else {
+                                this.error = `服务器出错：错误码:${status}`;
+                            }
+                            setTimeout(() => {
+                                this.error = "";
+                            }, 1500);
+                        });
+                }
+            });
         }
     }
 };
